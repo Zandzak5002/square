@@ -10,7 +10,7 @@ config.read('database.ini')
 
 bot = commands.Bot(intents=discord.Intents.all())
 
-
+TOKEN = os.environ['TOKEN'] 
 
 
 @bot.event
@@ -110,4 +110,4 @@ for folder in os.listdir('modules'):
   if os.path.exists(os.path.join("modules", folder, "cog.py")):  
    bot.load_extensions(f"modules.{folder}.cog")    
       
-bot.run('MTA0NjcyMzY5OTg4NzMyNTE5NA.GyqmVL.')
+bot.run(TOKEN)
